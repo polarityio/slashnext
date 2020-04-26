@@ -23,7 +23,7 @@ module.exports = {
    * @optional
    */
   description:
-    'SlashNext allows Polarity users to leverage SlashNexts On-demand Threat Intelligence (OTI) for the analysis of suspicious indicators e.g. IPs and Domains',
+    "SlashNext allows Polarity users to leverage SlashNext's On-demand Threat Intelligence (OTI) for the analysis of suspicious IPv4 addresses and domains.",
   entityTypes: ['IPv4', 'domain'],
   /**
    * Provide custom component logic and template for rendering the integration details block.  If you do not
@@ -62,7 +62,7 @@ module.exports = {
     rejectUnauthorized: false
   },
   logging: {
-    level: 'trace' //trace, debug, info, warn, error, fatal
+    level: 'info' //trace, debug, info, warn, error, fatal
   },
   /**
    * Options that are displayed to the user/admin in the Polarity integration user-interface.  Should be structured
