@@ -2,6 +2,10 @@
 
 The Polarity SlashNext integration allows Polarity users to leverage SlashNext's On-demand Threat Intelligence (OTI) for the analysis of suspicious IPv4 addresses and domains.
 
+| ![image](assets/overlay.png) |
+|---|
+|*SlashNext lookup example* |
+
 ## SlashNext Integration Options
 
 ### SlashNext OTI API Url
