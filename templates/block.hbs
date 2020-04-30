@@ -1,0 +1,125 @@
+<h1 class="p-title">
+  {{fa-icon "eye" fixedWidth=true}} Reputation Summary
+</h1>
+
+{{#if details.threatData.verdict}}
+  <div>
+      <span class="p-key">Verdict: </span>
+      <span class="p-value">{{details.threatData.verdict}}</span>
+  </div>
+{{/if}}
+
+{{#if details.threatData.threatType}}
+  <div>
+      <span class="p-key">Threat Type: </span>
+      <span class="p-value">{{details.threatData.threatType}}</span>
+  </div>
+{{/if}}
+
+{{#if details.threatData.threatName}}
+  <div>
+      <span class="p-key">Threat Name: </span>
+      <span class="p-value">{{details.threatData.threatName}}</span>
+  </div>
+{{/if}}
+
+{{#if details.threatData.threatStatus}}
+  <div>
+      <span class="p-key">Threat Status: </span>
+      <span class="p-value">{{details.threatData.threatStatus}}</span>
+  </div>
+{{/if}}
+
+{{#if details.threatData.lastSeen}}
+  <div>
+      <span class="p-key">Last Seen: </span>
+      <span class="p-value">{{details.threatData.lastSeen}}</span>
+  </div>
+{{/if}}
+
+{{#if details.threatData.firstSeen}}
+  <div>
+      <span class="p-key">First Seen: </span>
+      <span class="p-value">{{details.threatData.firstSeen}}</span>
+  </div>
+{{/if}}
+
+{{#if block.isLoadingDetails}}
+    <div class="alert alert-info mt-1" role="alert">
+      {{fa-icon "spinner-third" fixedWidth=true spin=true}} Report Details are Loading
+    </div>
+{{/if}}
+
+{{#if details.report}}
+    <h1 class="p-title">
+        {{fa-icon "file-alt" fixedWidth=true}}  Report Details
+    </h1>
+    {{#each details.report.urlDataList as |result index|}}
+      {{#if (gt index 0)}}
+        <hr>
+      {{/if}}
+        <h1 class="p-title">
+          Report #{{inc index}}
+        </h1>
+
+        {{#if result.threatData.verdict}}
+          <div>
+              <span class="p-key">Verdict: </span>
+              <span class="p-value">{{result.threatData.verdict}}</span>
+          </div>
+        {{/if}}
+
+        {{#if result.threatData.threatType}}
+          <div>
+              <span class="p-key">Threat Type: </span>
+              <span class="p-value">{{result.threatData.threatType}}</span>
+          </div>
+        {{/if}}
+
+        {{#if result.threatData.threatName}}
+          <div>
+              <span class="p-key">Threat Name: </span>
+              <span class="p-value">{{result.threatData.threatName}}</span>
+          </div>
+        {{/if}}
+
+        {{#if result.threatData.threatStatus}}
+          <div>
+              <span class="p-key">Threat Status: </span>
+              <span class="p-value">{{result.threatData.threatStatus}}</span>
+          </div>
+        {{/if}}
+
+        {{#if result.threatData.lastSeen}}
+          <div>
+              <span class="p-key">Last Seen: </span>
+              <span class="p-value">{{result.threatData.lastSeen}}</span>
+          </div>
+        {{/if}}
+
+        {{#if result.threatData.firstSeen}}
+          <div>
+              <span class="p-key">First Seen: </span>
+              <span class="p-value">{{result.threatData.firstSeen}}</span>
+          </div>
+        {{/if}}
+
+        {{#if result.url}}
+          <div>
+              <span class="p-key">URL: </span>
+              <span class="p-value">{{result.url}}</span>
+          </div>
+        {{/if}}
+
+        {{#if result.finalUrl}}
+          <div><span class="p-key">Final URL: </span></div>
+          <div class="url-container">{{result.finalUrl}}</div>
+        {{/if}}
+    {{/each}}
+{{/if}}
+
+{{#if (and (not block.isLoadingDetails) (eq details.report.urlDataList.length 0))}}
+    <div class="alert alert-info mt-2" role="alert">
+        No Report Details Found
+    </div>
+{{/if}}
