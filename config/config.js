@@ -25,6 +25,7 @@ module.exports = {
   description:
     "SlashNext allows Polarity users to leverage SlashNext's On-demand Threat Intelligence (OTI) for the analysis of suspicious IPv4 addresses and domains.",
   entityTypes: ['IPv4', 'domain'],
+  defaultColor: 'light-blue',
   /**
    * Provide custom component logic and template for rendering the integration details block.  If you do not
    * provide a custom template and/or component then the integration will display data as a table of key value
