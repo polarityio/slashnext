@@ -1,0 +1,74 @@
+{
+  "name": "SlashNext",
+  "acronym": "SNXT",
+  "description": "SlashNext allows Polarity users to leverage SlashNext's On-demand Threat Intelligence (OTI) for the analysis of suspicious IPv4 addresses and domains.",
+  "entityTypes": ["IPv4", "domain"],
+  "defaultColor": "light-blue",
+  "styles": ["./styles/style.less"],
+  "block": {
+    "component": {
+      "file": "./components/block.js"
+    },
+    "template": {
+      "file": "./templates/block.hbs"
+    }
+  },
+  "request": {
+    "cert": "",
+    "key": "",
+    "passphrase": "",
+    "ca": "",
+    "proxy": "",
+    "rejectUnauthorized": true
+  },
+  "logging": {
+    "level": "info"
+  },
+  "options": [
+    {
+      "key": "url",
+      "name": "SlashNext OTI API URL",
+      "description": "The base URL for the SlashNext OTI API to include the schema (https://) and port as needed",
+      "default": "https://oti.slashnext.cloud",
+      "type": "text",
+      "userCanEdit": false,
+      "adminOnly": true
+    },
+    {
+      "key": "apiKey",
+      "name": "API Key",
+      "description": "SlashNext OTI API Key",
+      "default": "",
+      "type": "password",
+      "userCanEdit": true,
+      "adminOnly": false
+    },
+    {
+      "key": "maxRecords",
+      "name": "Maximum Number of Reports to Return",
+      "description": "Maximum number of reports to return for a given indicator (-1 for all reports).",
+      "default": 5,
+      "type": "number",
+      "userCanEdit": false,
+      "adminOnly": true
+    },
+    {
+      "key": "showBenign",
+      "name": "Show entities with benign verdict",
+      "description": "If checked, the integration will return results with a \"Benign\" verdict.",
+      "default": false,
+      "type": "boolean",
+      "userCanEdit": true,
+      "adminOnly": false
+    },
+    {
+      "key": "showUnrated",
+      "name": "Show entities that are unrated (No Intel Found)",
+      "description": "If checked, the integration will return results for entities that have no intel found.",
+      "default": false,
+      "type": "boolean",
+      "userCanEdit": true,
+      "adminOnly": false
+    }
+  ]
+}
