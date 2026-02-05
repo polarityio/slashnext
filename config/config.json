@@ -3,9 +3,14 @@
   "name": "SlashNext",
   "acronym": "SNXT",
   "description": "SlashNext allows Polarity users to leverage SlashNext's On-demand Threat Intelligence (OTI) for the analysis of suspicious IPv4 addresses and domains.",
-  "entityTypes": ["IPv4", "domain"],
+  "entityTypes": [
+    "IPv4",
+    "domain"
+  ],
   "defaultColor": "light-blue",
-  "styles": ["./styles/style.less"],
+  "styles": [
+    "./styles/style.less"
+  ],
   "block": {
     "component": {
       "file": "./components/block.js"
@@ -70,5 +75,10 @@
       "userCanEdit": true,
       "adminOnly": false
     }
-  ]
+  ],
+  "reducer": {
+    "details": {
+      "file": "./reducers/details.json"
+    }
+  }
 }

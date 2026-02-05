@@ -1,0 +1,69 @@
+{
+  "threatData": {
+    "verdict": "Malicious",
+    "threatType": "Phishing",
+    "threatName": "Credential Harvester",
+    "threatStatus": "Active",
+    "lastSeen": "2024-01-15T18:45:23Z",
+    "firstSeen": "2023-12-01T09:15:00Z"
+  },
+  "normalizeData": {
+    "normalizeStatus": 0,
+    "normalizeMessage": "Success"
+  },
+  "urlData": {
+    "url": "https://malicious-example.com/login",
+    "scanId": "abc123def456",
+    "threatData": {
+      "verdict": "Malicious",
+      "threatType": "Phishing",
+      "threatName": "Credential Harvester",
+      "threatStatus": "Active"
+    }
+  },
+  "swgData": {
+    "swgInfo": {
+      "categories": ["Phishing", "Malware Distribution"],
+      "reputation": "High Risk"
+    }
+  },
+  "report": {
+    "urlDataList": [
+      {
+        "url": "https://malicious-example.com/login",
+        "finalUrl": "https://malicious-example.com/auth/steal",
+        "threatData": {
+          "verdict": "Malicious",
+          "threatType": "Phishing",
+          "threatName": "Credential Harvester",
+          "threatStatus": "Active",
+          "firstSeen": "2023-12-01T09:15:00Z",
+          "lastSeen": "2024-01-15T18:45:23Z"
+        },
+        "scanId": "report-scan-001",
+        "scannedAt": "2024-01-15T18:45:30Z"
+      },
+      {
+        "url": "https://malicious-example.com/verify",
+        "finalUrl": "https://malicious-example.com/verify",
+        "threatData": {
+          "verdict": "Malicious",
+          "threatType": "Phishing",
+          "threatName": "Banking Trojan",
+          "threatStatus": "Active",
+          "firstSeen": "2023-11-15T14:22:00Z",
+          "lastSeen": "2024-01-14T22:30:00Z"
+        },
+        "scanId": "report-scan-002",
+        "scannedAt": "2024-01-14T22:30:15Z"
+      }
+    ],
+    "totalResults": 2,
+    "page": 1
+  },
+  "metadata": {
+    "scanDate": "2024-01-15T18:45:23Z",
+    "apiVersion": "v1",
+    "requestId": "req-789xyz"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "root": {
+    "path": "",
+    "on_null": "return_empty"
+  },
+  "pipeline": [
+    {
+      "op": "copy",
+      "from": "threatData.verdict",
+      "to": "reduced_results.verdict"
+    },
+    {
+      "op": "copy",
+      "from": "threatData.threatType",
+      "to": "reduced_results.threat_type"
+    },
+    {
+      "op": "copy",
+      "from": "threatData.threatName",
+      "to": "reduced_results.threat_name"
+    },
+    {
+      "op": "copy",
+      "from": "threatData.threatStatus",
+      "to": "reduced_results.threat_status"
+    },
+    {
+      "op": "copy",
+      "from": "threatData.lastSeen",
+      "to": "reduced_results.last_seen"
+    },
+    {
+      "op": "prune",
+      "strategy": "empty_values",
+      "target": "reduced_results"
+    }
+  ],
+  "output": {
+    "result": "$working.reduced_results"
+  }
+}
